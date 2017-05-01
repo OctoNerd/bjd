@@ -1,3 +1,52 @@
 body {
-    background: orange;
+    font-family: sans-serif;
+}
+
+.menubar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo-wrap {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    &__logo-link {
+        text-decoration: none;
+    }
+
+    &__logo {
+        height: 45px;
+        margin-right: 10px;
+    }
+
+    &__name {
+        display: inline-block;
+    }
+}
+
+.nav {
+    display: inline-block;
+    margin-right: 10px;
+
+    &__item-list {
+        list-style: none;
+
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 10px;
+
+        & a {
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
 }
