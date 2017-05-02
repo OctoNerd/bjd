@@ -1,32 +1,77 @@
 body {
   font-family: sans-serif; }
 
+header {
+  max-width: 100%;
+  height: 670px;
+  background-image: url("/images/meetbjdcoverbw.png");
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.4);
+  /* semi-transparent layer */
+  background-size: 100%;
+  background-position: center top;
+  background-attachment: fixed;
+  position: relative;
+  background-repeat: no-repeat; }
+
 .menubar {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  color: black; }
+  .menubar svg {
+    fill: black; }
   .menubar__logo-wrap {
     display: flex;
     align-items: center;
     margin-left: 15px; }
   .menubar__logo-link {
-    text-decoration: none; }
+    text-decoration: none;
+    height: 45px; }
   .menubar__logo {
     height: 45px;
     margin-right: 10px; }
-  .menubar__name {
-    display: inline-block; }
 
 .nav {
   display: inline-block;
   margin-right: 10px; }
+  .nav--mobile {
+    display: none; }
+  .nav__menuIcon {
+    float: right; }
   .nav__item-list {
-    list-style: none; }
+    list-style: none;
+    overflow: hidden;
+    transition: max-height 0.5s; }
   .nav__item {
     display: inline-block;
     margin-right: 10px; }
+    .nav__item:hover {
+      cursor: pointer; }
     .nav__item a {
       color: black;
       text-decoration: none; }
       .nav__item a:hover {
         color: white; }
+
+@media screen and (max-width: 580px) {
+  .menubar {
+    align-items: center; }
+  .nav__item-list {
+    max-height: 0;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    text-align: center; }
+  .showing {
+    max-height: 10em; }
+  .nav__item {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: lightseagreen; }
+    .nav__item a:hover {
+      color: black; }
+  .nav--mobile {
+    display: block; } }
