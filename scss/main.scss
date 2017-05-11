@@ -9,7 +9,7 @@ header {
 
 	background-image: url("/images/meetbjdcoverbw.png");
 	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.1); /* semi-transparent layer */
-	background-size: 100%;
+	background-size: auto 500px;
 	background-position: center top;
 	background-attachment: fixed;
     background-repeat: no-repeat;
@@ -154,18 +154,14 @@ header {
 
 /* End listen block */
 
-//Media Queries
-// @media screen and (max-width: 2000px) {
-//     .hero__text-wrap {
-//         margin-top: 30%;
-//     }
-// }
 
-// @media screen and (max-width: 700px) {
-//     .hero__text-wrap {
-//         margin-top: 20%;
-//     }
-// }
+
+@media screen and (min-width: 775px) {
+    header {
+        background-size: 100%;
+    }
+}
+
 
 @media screen and (max-width: 650px) {
     .hero__heading {
