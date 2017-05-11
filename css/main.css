@@ -3,12 +3,20 @@ body {
   background-color: white; }
 
 header {
-  width: 100%;
-  background-repeat: no-repeat;
+  max-width: 100%;
   text-align: center;
-  display: inline-block;
+  background-image: url("/images/meetbjdcoverbw.png");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+  /* semi-transparent layer */
+  background-size: 100%;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 500px;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: center; }
 
 .menubar {
   display: flex;
@@ -16,6 +24,7 @@ header {
   justify-content: space-between;
   color: black;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 2; }
   .menubar svg {
@@ -53,34 +62,16 @@ header {
       .nav__item a:hover {
         color: white; }
 
-.hero__image-wrap {
-  position: relative;
-  z-index: -1; }
-  .hero__image-wrap:after {
-    content: '\A';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.2); }
-  .hero__image-wrap img {
-    width: 100%;
-    vertical-align: top; }
-
 .hero__text-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 15%; }
+  justify-content: center; }
 
 .hero__heading {
   color: white;
-  font-size: 50px; }
+  font-size: 50px;
+  margin-top: 20%; }
 
 .hero__intro {
   color: white;
@@ -91,14 +82,17 @@ header {
   margin-left: auto;
   margin-right: auto; }
 
-@media screen and (max-width: 2000px) {
-  .hero__text-wrap {
-    margin-top: 30%; } }
+/* Listen block */
+.listen {
+  text-align: center; }
+  .listen__heading {
+    font-size: 35px; }
+  .listen__BCplayer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px; }
 
-@media screen and (max-width: 700px) {
-  .hero__text-wrap {
-    margin-top: 20%; } }
-
+/* End listen block */
 @media screen and (max-width: 650px) {
   .hero__heading {
     font-size: 40px; } }
@@ -135,10 +129,6 @@ header {
     font-size: 23px; }
   .hero__intro {
     font-size: 14px; } }
-
-@media screen and (max-width: 400px) {
-  .hero__text-wrap {
-    margin-top: 12%; } }
 
 @media screen and (max-width: 350px) {
   .hero__heading {
