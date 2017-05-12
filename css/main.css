@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "theDeadSaloon";
+  src: url("/fonts/thedeadsaloon-Regular.ttf"); }
+
 body {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: white; }
 
 header {
@@ -7,7 +11,6 @@ header {
   text-align: center;
   background-image: url("/images/meetbjdcoverbw.png");
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
-  /* semi-transparent layer */
   background-size: auto 500px;
   background-position: center top;
   background-attachment: fixed;
@@ -23,6 +26,7 @@ header {
   align-items: center;
   justify-content: space-between;
   color: black;
+  background: rgba(255, 255, 255, 0.3);
   position: fixed;
   top: 0;
   width: 100%;
@@ -39,6 +43,8 @@ header {
   .menubar__logo {
     height: 45px;
     margin-right: 10px; }
+  .menubar__name {
+    font-family: "theDeadSaloon", serif; }
 
 .nav {
   display: inline-block;
@@ -53,9 +59,12 @@ header {
     transition: max-height 0.5s; }
   .nav__item {
     display: inline-block;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 2px; }
     .nav__item:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      border-bottom: 2px solid white;
+      margin-bottom: 0px; }
     .nav__item a {
       color: black;
       text-decoration: none; }
@@ -69,6 +78,7 @@ header {
   justify-content: center; }
 
 .hero__heading {
+  font-family: "theDeadSaloon", serif;
   color: white;
   font-size: 50px;
   margin-top: 20%; }
@@ -86,11 +96,14 @@ header {
 .listen {
   text-align: center; }
   .listen__heading {
-    font-size: 35px; }
+    font-family: "theDeadSaloon", serif;
+    font-size: 55px;
+    margin-top: 10px; }
   .listen__BCplayer {
     margin-left: auto;
     margin-right: auto;
-    width: 700px; }
+    max-width: 600px;
+    padding: 20px; }
 
 /* End listen block */
 @media screen and (min-width: 775px) {
@@ -122,9 +135,9 @@ header {
     width: 100%;
     padding: 10px 15px;
     text-align: center;
-    background-color: lightseagreen; }
+    background-color: rgba(255, 255, 255, 0.3); }
     .nav__item:hover {
-      background-color: lightgray; }
+      background-color: rgba(255, 255, 255, 0.7); }
     .nav__item a:hover {
       color: black; }
   .nav--mobile {
