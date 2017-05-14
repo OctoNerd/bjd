@@ -4,7 +4,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: white; }
+  background-color: #fafafa; }
 
 header {
   max-width: 100%;
@@ -16,7 +16,7 @@ header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
-  height: 500px;
+  height: 620px;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -25,14 +25,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: black;
-  background: rgba(255, 255, 255, 0.6);
+  color: #333;
+  background: rgba(200, 200, 200, 0.6);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2; }
   .menubar svg {
-    fill: black; }
+    fill: #333; }
   .menubar__logo-wrap {
     display: flex;
     align-items: center;
@@ -63,13 +63,13 @@ header {
     margin-bottom: 2px; }
     .nav__item:hover {
       cursor: pointer;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid #fafafa;
       margin-bottom: 0px; }
     .nav__item a {
-      color: black;
+      color: #333;
       text-decoration: none; }
       .nav__item a:hover {
-        color: white; }
+        color: #fafafa; }
 
 .hero__text-wrap {
   width: 100%;
@@ -79,12 +79,12 @@ header {
 
 .hero__heading {
   font-family: "theDeadSaloon", serif;
-  color: white;
+  color: #fafafa;
   font-size: 50px;
   margin-top: 20%; }
 
 .hero__intro {
-  color: white;
+  color: #fafafa;
   font-size: 20px;
   margin-top: 20px;
   width: 85%;
@@ -95,10 +95,19 @@ header {
 /* Listen block */
 .listen {
   text-align: center; }
+  .listen__videos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .listen__videos .player {
+      max-width: 500px;
+      margin: 30px;
+      box-shadow: 0 0 0 10px #333, 0 0 0 15px #fafafa, 0 0 0 20px #333; }
   .listen__heading {
     font-family: "theDeadSaloon", serif;
     font-size: 55px;
-    margin-top: 10px; }
+    margin: 20px;
+    color: #333; }
   .listen__BCplayer {
     margin-left: auto;
     margin-right: auto;
@@ -106,9 +115,33 @@ header {
     padding: 20px; }
 
 /* End listen block */
+/* shows bnlock */
+.shows {
+  text-align: center; }
+  .shows__heading {
+    font-family: "theDeadSaloon", serif;
+    font-size: 55px;
+    margin: 20px;
+    color: #333; }
+  .shows__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .shows__showDates {
+    width: 60%; }
+    .shows__showDates table {
+      width: 100%; }
+    .shows__showDates tr, .shows__showDates td {
+      padding: 15px; }
+
+/* END shows block */
 @media screen and (min-width: 775px) {
   header {
     background-size: 100%; } }
+
+@media screen and (max-width: 932px) {
+  header {
+    height: 500px; } }
 
 @media screen and (max-width: 650px) {
   .hero__heading {
@@ -139,7 +172,7 @@ header {
     .nav__item:hover {
       background-color: rgba(255, 255, 255, 0.7); }
     .nav__item a:hover {
-      color: black; }
+      color: #333; }
   .nav--mobile {
     display: block; }
   .hero__heading {

@@ -11,7 +11,7 @@ $bodyFont: 'Open Sans', sans-serif;
 
 body {
     font-family: $bodyFont;
-    background-color: white;
+    background-color: #fafafa;
 }
 
 header {
@@ -25,7 +25,7 @@ header {
 	background-attachment: fixed;
     background-repeat: no-repeat;
 	position: relative;
-    height: 500px;
+    height: 620px;
 
     display: flex;
     flex-direction: column;
@@ -39,15 +39,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: black;
-    background: rgba(255,255,255,.6);
+    color: #333;
+    background: rgba(200,200,200,.6);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
 
     & svg {
-        fill: black;
+        fill: #333;
     }
 
     &__logo-wrap {
@@ -96,16 +96,16 @@ header {
 
         &:hover {
             cursor: pointer;
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid #fafafa;
             margin-bottom: 0px;
         }
 
         & a {
-            color: black;
+            color: #333;
             text-decoration: none;
 
             &:hover {
-                color: white;
+                color: #fafafa;
             }
         }
     }
@@ -119,12 +119,12 @@ header {
 }
 .hero__heading {
     font-family: $headingFont;
-    color: white;
+    color: #fafafa;
     font-size: 50px;
     margin-top: 20%;
 }
 .hero__intro {
-    color: white;
+    color: #fafafa;
     font-size: 20px;
     margin-top: 20px;
     width: 85%;
@@ -137,10 +137,23 @@ header {
 .listen {
     text-align: center;
 
+    &__videos{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        .player {
+            max-width: 500px;
+            margin: 30px;
+            box-shadow: 0 0 0 10px #333, 0 0 0 15px #fafafa, 0 0 0 20px #333;
+        }
+    }
+
     &__heading {
-    font-family: $headingFont;
-    font-size: 55px;
-    margin-top: 10px;
+        font-family: $headingFont;
+        font-size: 55px;
+        margin: 20px;
+        color: #333;
     }
 
     &__BCplayer {
@@ -150,8 +163,39 @@ header {
         padding: 20px;
     }
 }
-
 /* End listen block */
+
+/* shows bnlock */
+.shows {
+    text-align: center;
+
+    &__heading {
+        font-family: $headingFont;
+        font-size: 55px;
+        margin: 20px;
+        color: #333;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__showDates {
+        width: 60%;
+
+        table {
+            width: 100%;
+        }
+
+        tr, td {
+            padding: 15px;
+        }
+    }
+}
+
+/* END shows block */
 
 
 @media screen and (min-width: 775px) {
@@ -160,6 +204,11 @@ header {
     }
 }
 
+@media screen and (max-width: 932px) {
+    header {
+        height: 500px;
+    }
+}
 
 @media screen and (max-width: 650px) {
     .hero__heading {
@@ -200,7 +249,7 @@ header {
         }
 
         & a:hover {
-            color: black;
+            color: #333;
         }
 	}
 	.nav--mobile {
