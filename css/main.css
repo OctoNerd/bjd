@@ -100,9 +100,12 @@ header {
     justify-content: space-around;
     flex-wrap: wrap; }
     .listen__videos .player {
-      max-width: 500px;
       margin: 30px;
-      box-shadow: 0 0 0 10px #333, 0 0 0 15px #fafafa, 0 0 0 20px #333; }
+      max-width: 500px;
+      max-height: 280px; }
+    .listen__videos iframe {
+      max-width: 100%;
+      max-height: 100%; }
   .listen__heading {
     font-family: "theDeadSaloon", serif;
     font-size: 55px;
@@ -115,7 +118,7 @@ header {
     padding: 20px; }
 
 /* End listen block */
-/* shows bnlock */
+/* shows block */
 .shows {
   text-align: center; }
   .shows__heading {
@@ -128,11 +131,14 @@ header {
     justify-content: space-around;
     flex-wrap: wrap; }
   .shows__showDates {
-    width: 60%; }
+    margin-left: auto;
+    margin-right: auto; }
     .shows__showDates table {
-      width: 100%; }
-    .shows__showDates tr, .shows__showDates td {
-      padding: 15px; }
+      width: 100%;
+      border: 1px solid black; }
+    .shows__showDates tr, .shows__showDates td, .shows__showDates th {
+      padding: 15px;
+      border: 1px solid black; }
 
 /* END shows block */
 @media screen and (min-width: 775px) {
@@ -179,6 +185,10 @@ header {
     font-size: 23px; }
   .hero__intro {
     font-size: 14px; } }
+
+@media screen and (max-width: 500px) {
+  .listen__videos .player {
+    margin: 0px 30px 0px 30px; } }
 
 @media screen and (max-width: 350px) {
   .hero__heading {

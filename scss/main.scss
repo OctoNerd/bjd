@@ -7,8 +7,6 @@ $headingFont: 'theDeadSaloon', serif;
 $bodyFont: 'Open Sans', sans-serif;
 
 
-
-
 body {
     font-family: $bodyFont;
     background-color: #fafafa;
@@ -137,15 +135,30 @@ header {
 .listen {
     text-align: center;
 
+    // &__BCplayer {
+    //     display: inline-block;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     width: 100%;
+    // }
+    // &__BCplayer--big {
+    //     display: none;
+    // }
+
     &__videos{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        
+
         .player {
-            max-width: 500px;
             margin: 30px;
-            box-shadow: 0 0 0 10px #333, 0 0 0 15px #fafafa, 0 0 0 20px #333;
+            max-width: 500px;
+            max-height: 280px;
+        }
+
+        iframe {
+            max-width: 100%;
+            max-height: 100%;
         }
     }
 
@@ -165,7 +178,7 @@ header {
 }
 /* End listen block */
 
-/* shows bnlock */
+/* shows block */
 .shows {
     text-align: center;
 
@@ -183,14 +196,17 @@ header {
     }
 
     &__showDates {
-        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
 
         table {
             width: 100%;
+            border: 1px solid black;
         }
 
-        tr, td {
+        tr, td, th {
             padding: 15px;
+            border: 1px solid black;
         }
     }
 }
@@ -263,8 +279,19 @@ header {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+    .listen__videos .player {
+        margin: 0px 30px 0px 30px;
+    }
+}
 
+@media screen and (max-width: 450px) {
+    // .listen__BCplayer {
+    //     display: none;
+    // }
+    // .listen__BCplayer--big {
+    //     display: block;
+    // }
 }
 
 @media screen and (max-width: 350px) {
