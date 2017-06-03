@@ -25,14 +25,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #333;
-  background: rgba(200, 200, 200, 0.6);
+  color: #fff;
+  background: #333;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2; }
   .menubar svg {
-    fill: #333; }
+    fill: #fff; }
   .menubar__logo-wrap {
     display: flex;
     align-items: center;
@@ -66,8 +66,8 @@ header {
       border-bottom: 2px solid #fafafa;
       margin-bottom: 0px; }
     .nav__item a {
-      color: #333;
-      text-decoration: none; }
+      text-decoration: none;
+      color: #fff; }
       .nav__item a:hover {
         color: #fafafa; }
 
@@ -94,7 +94,8 @@ header {
 
 /* Listen block */
 .listen {
-  text-align: center; }
+  text-align: center;
+  padding-top: 45px; }
   .listen__videos {
     display: flex;
     justify-content: space-around;
@@ -120,7 +121,8 @@ header {
 /* End listen block */
 /* shows block */
 .shows {
-  text-align: center; }
+  text-align: center;
+  padding-top: 45px; }
   .shows__heading {
     font-family: "theDeadSaloon", serif;
     font-size: 55px;
@@ -131,8 +133,7 @@ header {
     justify-content: space-around;
     flex-wrap: wrap; }
   .shows__showDates {
-    margin-left: auto;
-    margin-right: auto; }
+    margin: 40px auto; }
     .shows__showDates table {
       width: 100%;
       border: 1px solid black; }
@@ -174,11 +175,15 @@ header {
     width: 100%;
     padding: 10px 15px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.3); }
+    background-color: gray;
+    margin-bottom: 0px; }
     .nav__item:hover {
-      background-color: rgba(255, 255, 255, 0.7); }
-    .nav__item a:hover {
-      color: #333; }
+      background-color: lightgray;
+      border: none; }
+    .nav__item a {
+      color: #fff; }
+      .nav__item a:hover {
+        color: #333; }
   .nav--mobile {
     display: block; }
   .hero__heading {
