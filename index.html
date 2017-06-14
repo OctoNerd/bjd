@@ -8,12 +8,12 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
-<body>
+<body id="home">
     
     <header>
         <div class="menubar">
             <div class="menubar__logo-wrap">
-                <a class="menubar__logo-link" href="#">
+                <a class="menubar__logo-link" href="#home">
                     <svg class="menubar__logo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.0, 512) scale(0.1,-0.1)" stroke="none"><path d="M2031 3329 c-206 -26 -393 -132 -524 -296 -30 -37 -101 -135 -158 -218 -132 -191 -289 -353 -394 -407 -120 -62 -203 -82 -340 -82 -114 -1 -123 1 -186 30 -127 60 -193 161 -193 294 0 118 47 202 148 261 l51 31 -55 -7 c-108 -13 -201 -73 -268 -173 -72 -108 -95 -188 -96 -327 -1 -348 240 -552 744 -631 162 -25 602 -26 779 -1 431 61 772 195 967 379 l54 51 54 -51 c195 -184 536 -318 967 -379 177 -25 617 -24 779 1 341 53 550 158 662 331 58 88 82 179 82 300 -1 139 -24 219 -96 327 -67 100 -160 160 -268 173 l-55 7 51 -31 c101 -59 148 -143 148 -261 0 -133 -66 -234 -193 -294 -63 -29 -72 -31 -186 -30 -137 0 -220 20 -340 82 -105 54 -262 216 -394 407 -193 278 -273 360 -426 436 -254 125 -556 115 -737 -24 l-48 -37 -47 37 c-125 95 -280 128 -482 102z"/></g></svg>
                 </a>
                 <span class="menubar__name">Blackjack Davey</span>
@@ -23,7 +23,7 @@
                     <svg class="nav__menuIcon" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
                 </div>
                 <ul class="nav__item-list">
-                    <li class="nav__item"><a href="#">Home</a></li>
+                    <li class="nav__item"><a href="#home">Home</a></li>
                     <li class="nav__item"><a href="#listen">Listen</a></li>
                     <li class="nav__item"><a href="#shows">Shows</a></li>
                 </ul>
@@ -54,20 +54,34 @@
     <div class="shows" id="shows">
         <h2 class="shows__heading">Shows</h2>
         <div class="shows__content">
-            <div class="shows__showDates">
-                <table>
-                    <tr>
-                        <th>Date</th>
-                        <th>Location</th>
-                        <th>Time</th>
-                    </tr>
-                    <tr>
-                        <td>May 1st, 2017</td>
-                        <td>Firkin Tavern</td>
-                        <td>Doors: 7:00 PM</td>
-                    </tr>
-                </table>
+            <div class="shows__events">
+
+                <div class="shows__event">
+                    <div class="event__date">July 13th, 2017</div>
+                    <div class="event__location">
+                            <span class="event__venue">Firkin Tavern</span>
+                            <span class="event__city">Portland, Oregon</span>
+                    </div>
+                    <div class="event__time">
+                        <span class="time__doors">Doors: 7:00 PM</span>
+                        <span class="time__show">Show: 8:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="shows__event">
+                    <div class="event__date">July 28th, 2017</div>
+                    <div class="event__location">
+                            <span class="event__venue">Firkin Tavern</span>
+                            <span class="event__city">Portland, Oregon</span>
+                    </div>
+                    <div class="event__time">
+                        <span class="time__doors">Doors: 7:00 PM</span>
+                        <span class="time__show">Show: 8:00 PM</span>
+                    </div>
+                </div>
+
             </div>
+
             
             <div class="shows__FBfeed">
                 <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fblackjackdavey3%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
