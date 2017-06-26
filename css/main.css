@@ -139,8 +139,7 @@ header {
   .shows__event {
     border-top: 1px solid #fafafa;
     padding-top: 10px;
-    min-width: 400px;
-    max-width: 1000px;
+    width: 300px;
     text-align: left; }
     .shows__event .event__date {
       font-weight: bold;
@@ -153,6 +152,22 @@ header {
         margin-right: 10px; }
 
 /* END shows block */
+footer {
+  height: 50px;
+  background: #fafafa;
+  padding-top: 30px;
+  margin-top: 50px; }
+  footer div {
+    position: relative;
+    width: 175px;
+    margin-left: auto;
+    margin-right: auto; }
+  footer a {
+    text-decoration: none;
+    color: black; }
+    footer a:hover {
+      color: gray; }
+
 @media screen and (min-width: 775px) {
   header {
     background-size: 100%; } }
